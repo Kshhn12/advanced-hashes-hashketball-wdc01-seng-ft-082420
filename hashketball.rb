@@ -231,4 +231,9 @@ def big_shoe_rebounds
       return player_info[:rebounds]
     end
   end
+  game_hash[:away][:players].each do |player_info|
+    if player_info[:shoe] == shoe_size_array[shoe_size_array.length - 1]
+      return player_info[:rebounds]
+    end
+  end
 end
