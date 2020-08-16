@@ -217,14 +217,14 @@ def big_shoe_rebounds
   iterator = 0
   shoe_size_array = []
   while iterator < game_hash[:home][:players].length
-    shoe_size_array.push(shoe_size(game_hash[:home][:players][iterator][:player_name]))
+    shoe_size_array.push(shoe_size(game_hash[:home][:players][iterator][:shoe]))
     iterator +=1
   end
   iterator = 0
   while iterator < game_hash[:away][:players].length
-    shoe_size_array.push(shoe_size(game_hash[:away][:players][iterator][:player_name]))
+    shoe_size_array.push(shoe_size(game_hash[:away][:players][iterator][:shoe]))
     iterator +=1
   end
   shoe_size_array = shoe_size_array.sort
-  return shoe_size_array[shoe_size_array.length - 1]
+  shoe_size_array[shoe_size_array.length - 1]
 end
